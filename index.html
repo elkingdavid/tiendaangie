@@ -1,0 +1,239 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Tienda de regalos angie</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css2?family=Galada&family=Norican&display=swap" rel="stylesheet">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+<div class="header">
+	<!--					inicio de barra-->
+	<div class="topbar">
+		<p class="textbar">Pereira Colombia</p>
+		<img class="bandera" src="images/bandera.png" height="40" width="40"/>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header-left">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					</div>
+					<div class="menu">
+						<a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						<ul class="nav" id="nav">
+							<a class="togglelogo" href="index.html"><img src="images/logo.png" alt="" width="100px"/></a>
+							<li><a href="shop.html">Tienda</a></li>
+							<li><a href="team.html">Grupo</a></li>
+							<li><a href="experiance.html">Eventos</a></li>
+							<li><a href="experiance.html">Experiencia</a></li>
+							<li><a href="shop.html">Empresa</a></li>
+							<li><a href="contact.html">Contacto</a></li>
+							<div class="clear"></div>
+						</ul>
+						<script type="text/javascript" src="js/responsive-nav.js"></script>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="header_right">
+					<!-- start search-->
+					<div class="search-box">
+						<div id="sb-search" class="sb-search">
+							<form>
+								<input class="sb-search-input" placeholder="Ingrese una palabra clave..." type="search" name="search" id="search">
+								<input class="sb-search-submit" type="submit" value="">
+								<span class="sb-icon-search"> </span>
+							</form>
+						</div>
+					</div>
+					<!----search-scripts---->
+					<script src="js/classie.js"></script>
+					<script src="js/uisearch.js"></script>
+					<script>
+						new UISearch( document.getElementById( 'sb-search' ) );
+					</script>
+					<!----//search-scripts---->
+					<ul class="icon1 sub-icon1 profile_img">
+						<li><a class="active-icon c1" href="#"> </a>
+							<ul class="sub-icon1 list">
+								<div class="product_control_buttons">
+									<a href="#"><img src="images/edit.png" alt=""/></a>
+									<a href="#"><img src="images/close_edit.png" alt=""/></a>
+								</div>
+								<div class="clear"></div>
+								<li class="list_img"><img src="images/1.jpg" alt=""/></li>
+								<li class="list_desc"><h4><a href="#">batola en satin</a></h4><span class="actual">1 x
+                          $41.000</span></li>
+								<div class="login_buttons">
+									<div class="check_button"><a href="checkout.html">Comprar</a></div>
+									<div class="login_button"><a href="login.html">Login</a></div>
+									<div class="clear"></div>
+								</div>
+								<div class="clear"></div>
+							</ul>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="banner">
+	<!-- start slider -->
+	<div id="fwslider">
+		<div class="slider_container">
+			<div class="slide">
+				<!-- Slide image -->
+				<img src="images/slider1.jpg" class="img-responsive" alt=""/>
+				<!-- /Slide image -->
+				<!-- Texts container -->
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<!-- Text title -->
+						<h1 class="title">Regalos<br>Unicos</h1>
+						<!-- /Text title -->
+						<div class="button"><a href="#">Comprar</a></div>
+					</div>
+				</div>
+				<!-- /Texts container -->
+			</div>
+			<!-- /Duplicate to create more slides -->
+			<div class="slide">
+				<img src="images/slider2.jpg" class="img-responsive" alt=""/>
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<h1 class="title">Regalos<br>Sorpresa</h1>
+						<div class="button"><a href="#">Comprar</a></div>
+					</div>
+				</div>
+			</div>
+			<!--/slide -->
+		</div>
+		<div class="timers"></div>
+		<div class="slidePrev"><span></span></div>
+		<div class="slideNext"><span></span></div>
+	</div>
+	<!--/slider -->
+</div>
+<div class="main">
+	<div class="content-top">
+		<h2>Se incluye la entrega + foto</h2>
+		<img class="imgenvio" src="images/envio.jpg"/>
+		<div class="stickers">
+			<div class="stickers1"><img class="stickers1i"src="images/stickers1.jpg"/> </div>
+			<div class="stickers2"><img class="stickers2i"src="images/stickers2.jpg"/> </div>
+			<div class="stickers3"><img class="stickers3i"src="images/stickers3.jpg"/> </div>
+			<div class="stickers4"><img class="stickers4i"src="images/stickers4.jpg"/> </div>
+			<div class="stickers5"><img class="stickers5i"src="images/stickers5.jpg"/> </div>
+		</div>
+		<div class="close_but"><i class="close1"> </i></div>
+		<ul id="flexiselDemo3">
+			<li><img src="images/board1.jpg" /></li>
+			<li><img src="images/board2.jpg" /></li>
+			<li><img src="images/board3.jpg" /></li>
+			<li><img src="images/board4.jpg" /></li>
+			<li><img src="images/board5.jpg" /></li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="footer_box">
+					<h4>Productos</h4>
+					<li><a href="#">Hombres</a></li>
+					<li><a href="#">Mujeres</a></li>
+					<li><a href="#">Niños</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<ul class="footer_box">
+					<h4>Nosotros</h4>
+					<li><a href="#">Recorrido</a></li>
+					<li><a href="#">Grupo</a></li>
+					<li><a href="#">Descarga el catalogo</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<ul class="footer_box">
+					<h4>Soporte usurio</h4>
+					<li><a href="#">Contacto</a></li>
+					<li><a href="#">Envio y ordenes</a></li>
+					<li><a href="#">Facil retorno</a></li>
+					<li><a href="#">Garantia</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<ul class="footer_box">
+					<h4>Incribete</h4>
+					<div class="footer_search">
+						<form>
+							<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+							<input type="submit" value="Go">
+						</form>
+					</div>
+					<ul class="social">
+						<li class="facebook"><a href="#"><span> </span></a></li>
+						<li class="twitter"><a href="#"><span> </span></a></li>
+						<li class="instagram"><a href="#"><span> </span></a></li>
+					</ul>
+
+				</ul>
+			</div>
+		</div>
+		<div class="row footer_bottom">
+			<div class="copy">
+				<p>© 2020 desing by <a href="https://www.linkedin.com/in/elkin-david-gutierrez-pati%C3%B1o-704027180/" target="_blank">31kin6</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
